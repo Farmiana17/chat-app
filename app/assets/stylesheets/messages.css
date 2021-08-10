@@ -63,17 +63,19 @@
 .close_room {
   margin-top: 40px;
 }
-
 .close_room a {
   text-decoration: none;
   color: darkred;
   border: 1pt solid darkred;
   padding: 20px;
 }
+
+
 .messages {
   background-color: #FAFAFA;
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0;
+  overflow: scroll;
 }
 .message_column {
   margin-top: 10px;
@@ -98,6 +100,8 @@
   color: #434A54;
   margin-bottom: 40px;
 }
+
+
 .form {
   background-color: #DDDDDD;
   height: 90px;

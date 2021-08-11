@@ -10,6 +10,7 @@
   </div>
 </div>
 
+
 <div class="messages">
 
   <div class="message_column">
@@ -47,7 +48,19 @@
 </div>
 
 
-<div class="form">
+<%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
+  <div class="form_box">
+    <%= f.text_field :content, class: 'textarea', placeholder: 'type a message' %>
+    <label class="form_image">
+      <span class="image_file">画像</span>
+      <% f.file_field :image, class: 'hidden' %>
+    </label>
+  </div>
+  <%= f.submit '送信', class: 'submit_button' %>
+<% end %>
+
+
+<%# <div class="form">
 
   <div class="form_box">
     <input class="textarea" placeholder="type a message">
@@ -58,4 +71,4 @@
   </div>
   <input class="submit_button" type="submit" value="送信">
 
-</div>
+</div> %>
